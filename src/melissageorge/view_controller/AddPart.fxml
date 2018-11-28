@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addPartPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="melissageorge.view_controller.AddPartController">
+   <children>
+      <Label layoutX="41.0" layoutY="43.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inhouseRadio" layoutX="160.0" layoutY="44.0" mnemonicParsing="false" onAction="#inhouseRadioHandler" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="togGroup2" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourcedRadio" layoutX="257.0" layoutY="44.0" mnemonicParsing="false" onAction="#outsourceRadioHandler" text="Outsourced" toggleGroup="$togGroup2" />
+      <Label layoutX="35.0" layoutY="94.0" text="ID" />
+      <Label layoutX="35.0" layoutY="238.0" text="Max" />
+      <Label fx:id="inOutLabel" layoutX="35.0" layoutY="272.0" text="Machine ID" />
+      <Label layoutX="34.0" layoutY="200.0" text="Price/Cost" />
+      <Label layoutX="33.0" layoutY="165.0" text="Inv" />
+      <Label layoutX="34.0" layoutY="128.0" text="Name" />
+      <TextField fx:id="idField" disable="true" layoutX="150.0" layoutY="89.0" text="Autogen - Disabled" />
+      <TextField fx:id="nameField" layoutX="150.0" layoutY="123.0" onAction="#nameFieldHandler" promptText="Name" />
+      <TextField fx:id="invField" layoutX="150.0" layoutY="160.0" promptText="Inv" />
+      <TextField fx:id="priceField" layoutX="150.0" layoutY="195.0" promptText="Price/Cost" />
+      <TextField fx:id="maxField" layoutX="150.0" layoutY="233.0" prefHeight="27.0" prefWidth="65.0" promptText="Max" />
+      <TextField fx:id="minField" layoutX="257.0" layoutY="233.0" prefHeight="27.0" prefWidth="65.0" promptText="Min" />
+      <TextField fx:id="inOutField" layoutX="150.0" layoutY="267.0" onAction="#inOutFieldHandler" promptText="Mach ID" />
+      <Label layoutX="230.0" layoutY="238.0" text="Min" />
+      <Button fx:id="saveButton" layoutX="212.0" layoutY="327.0" mnemonicParsing="false" onAction="#saveButtonHandler" text="Save" />
+      <Button fx:id="cancelButton" layoutX="293.0" layoutY="327.0" mnemonicParsing="false" onAction="#cancelButtonHandler" text="Cancel" />
+   </children>
+</AnchorPane>
